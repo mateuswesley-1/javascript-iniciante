@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabuada</title>
+    <link rel="stylesheet" href="styles015.css">
+    <script src="ex015.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Tabuada</h1>
+    </header>
+    <section>
+        <div>
+        <p>Número: <input type="text" oninput="this.value=this.value.replace(/[^0-9-]/g,'');" id="numero">
+        <input type="button" value="Calcular" onclick="tabuada()"></p>
+        </div>
+        <div id="res">
+            <select name="tabuada" id="tabuada" size="10">
+                <option value="padrao">Entre com um número</option>
+            </select>
+        </div>
+    </section>
+    <footer>
+        <p>&copy; Mateus Wesley</p>
+    </footer>
+</body>
+</html>

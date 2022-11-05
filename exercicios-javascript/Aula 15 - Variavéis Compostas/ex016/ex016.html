@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Números Array</title>
+    <link rel="stylesheet" href="styles016.css">
+    
+</head>
+<body>
+    <header>
+        <h1>Lista de números</h1>
+    </header>
+    <section>
+        <div>
+        <p>Número: <input type="text" oninput="this.value=this.value.replace(/[^0-9-.]/g,'');" id="numero">
+        <input type="button" value="Adicionar" onclick="adicionar()"> <input type="button" value="Remover" onclick="remover()"></p>
+        <div id="caixa_resultado">
+            <select name="print_lista" id="print_lista" size="10">
+                <option value="padrao">Entre com um número</option>
+            </select><br>
+
+            
+        </div>
+        <p><input type="button" value="Finalizar" onclick="finalizar()"></p>
+        </div>
+        <div id="res">
+        </div>
+    </section>
+    <footer>
+        <p>&copy; Mateus Wesley</p>
+    </footer>
+    <script src="ex016.js"></script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contador</title>
+    <link rel="stylesheet" href="styles014.css">
+    <script src="ex014.js"></script>
+<body>
+    <header>
+        <h1>Contador</h1>
+    </header>
+    <section>
+        <div id="container">
+            <div>Início: </div> <div><input type="text" oninput="this.value=this.value.replace(/[^0-9-]/g,'');" id="inicio" value="0"></div> 
+            <div>Fim: </div> <div><input type="text" oninput="this.value=this.value.replace(/[^0-9-]/g,'');" id="fim"></div> 
+            <div>Passo: </div> <div><input type="text" oninput="this.value=this.value.replace(/[^0-9-]/g,'');" id="passo" value="1"></div> 
+            <div><input type="button" value="Contar" onclick="contar()"></div>
+            
+        </div>
+
+        <div id="res">
+            Preencha os dados acima para ver os resultados!
+        </div>
+    </section>
+    <footer>
+        <p>&copy; Mateus Wesley</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerador de imagem pra mandar no grupo do zap</title>
+    <link rel="stylesheet" href="styles012.css">
+</head>
+<body>
+    <h1>Hora do dia</h1>
+    <div class="container">
+        <p class = 'mensagem'></p>
+        <p class="comprimento"></p>
+        <img class = 'foto' src="imagens/dia.jpg" alt="">
+    </div>
+    <script>
+
+        var agora = new Date()
+        var hora = 19
+        var msg = window.document.querySelector('p.mensagem')
+        var comprimento = document.querySelector('p.comprimento')
+        var imagem = document.querySelector('img.foto')
+        var corpo = document.querySelector('body')
+        var container = document.querySelector('div.container')
+        msg.innerHTML = `<p>Agora são ${hora} horas</p>`
+        
+        if(hora<12){
+          comprimento.innerHTML = '<p>Bom dia!</p>'
+          imagem.src = 'imagens/dia.jpg'
+          corpo.style.background = '#63a1d0fc'
+          corpo.style.color = '#383131'
+          container.style.background = '#9dbed7fc'
+
+        }else if(hora<=18){
+          comprimento.innerHTML = '<p>Boa tarde!</p>'
+          imagem.src = 'imagens/tarde.jpg'
+          corpo.style.background = '#cc9f4b'
+          corpo.style.color = '#392835'
+          container.style.background = '#c2ac85'
+        }else{
+          comprimento.innerHTML = '<p>Boa noite!</p>'
+          imagem.src = 'imagens/noite.jpg'
+          corpo.style.background = '#2d2c2c'
+          corpo.style.color = '#eadac6'
+          container.style.background = '#656363'
+
+        }
+    </script>
+</body>
+</html>

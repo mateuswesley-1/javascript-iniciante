@@ -1,0 +1,21 @@
+body{
+    text-align: center;
+    background: #63a1d0fc;
+    font: normal 18px Arial;
+    color: #eadac6;
+}   
+
+div{
+    margin: auto;
+    width: 350px;
+    background: #9dbed7fc;
+    padding: 20px;
+    border-radius: 5%;
+    box-shadow: 5px 5px 10px #04080955;
+}
+
+img{
+    width:200px;
+    height: 200px;
+    border-radius: 50%;
+}
