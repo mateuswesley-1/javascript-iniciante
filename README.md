@@ -1,2 +1,2 @@
-# javascript-iniciante
- exercicios de javascript iniciante curso em video
+# Exercícios de Javascript do Curso em Vídeo
+ Exércicios feitos em aula com o Professor Gustavo Guanabara
