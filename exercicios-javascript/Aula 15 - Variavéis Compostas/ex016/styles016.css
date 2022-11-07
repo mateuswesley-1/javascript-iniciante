@@ -35,4 +35,10 @@ input[type='button']{
     margin-right: 5px;
 }
 
+div#caixa_resultado{
+    display: flex;
+    align-items: flex-start;
+    gap: 5px;
+}
+
 

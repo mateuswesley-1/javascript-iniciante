@@ -3,8 +3,6 @@ var res = document.querySelector('div#res')
 // select onde serão exibidos todos os números
 var print_lista = document.querySelector('select#print_lista')
 
-// acompanha a posição do número no selector
-var i = 0
 
 // objeto que vai associar cada número a sua 
 // posição no selector
@@ -12,27 +10,26 @@ var obj_numeros = {}
 
 // função para adicionar valores a lista
 function adicionar(){
-    // sempre que adicionar um número na lista reseta o resultado
-    res.innerHTML = ''
+    if(print_lista[0].value == "Entre com um número"){
+        print_lista.remove(0)
+    }
+    
 
 
     // número fornecido pelo usuário
     var txt_num = window.document.querySelector('input#numero')
     var num = Number(txt_num.value)
-
-    // adiciona o número ao object e aumenta i em 1
-    // para que o próximo número receba a posição seguinte.
-    obj_numeros[num] = i
-    i ++
-
-
-
     
     // verifica se o usuário forneceu algum número,
     //precisamos verificar diretamente a propriedade que possui o conteúdo (.value) não o elemento em si, txt_num.value é uma string, diferente de txt_num, que é object
     if(txt_num.value == ''){
         window.alert('Entre com um valor válido!')
+    
+    }else if(lista.includes(num, 0)){
+        window.alert('O número informado já está na lista!')
     }else{
+        // sempre que adicionar um número na lista reseta o resultado
+        res.innerHTML = ''
 
         // adciona o valor fornecido ao fim da lista,
         // criamos um elemento que vai armazenar a option que será adcionada ao select
@@ -90,26 +87,11 @@ function finalizar(){
     
 // função para remover elemento
 function remover(){
-    
-    var txt_num = window.document.querySelector('input#numero')
-    var num = Number(txt_num.value)
-    let indice_select = obj_numeros[num]
-    let indice_lista = lista.indexOf(num)
-    
-    if(indice_lista == -1){
-        window.alert('Esse número não existe na lista!')
-    }else{
-        i--
-        txt_num.value = ''
-        txt_num.focus()
-        res.innerHTML = ''
-        lista.splice(indice_lista, 1)
-        print_lista.remove(indice_select+1)
-    }
 
-    
-    
-
+    // o index do select começa de 1...
+    res.innerHTML = ''
+    lista.splice(lista[print_lista.selectedIndex-1], 1)
+    print_lista.remove(print_lista.selectedIndex)
 
 }
 
