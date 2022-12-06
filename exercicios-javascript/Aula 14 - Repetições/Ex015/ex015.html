@@ -14,14 +14,17 @@
     </header>
     <section>
         <div>
-        <p>Número: <input type="text" oninput="this.value=this.value.replace(/[^0-9-]/g,'');" id="numero">
-        <input type="button" value="Calcular" onclick="tabuada()"></p>
+        <p>Número:</p>
+        <p><input type="text" oninput="this.value=this.value.replace(/[^0-9-]/g,'');" id="numero"></p>
+        <p>Limite: </p>
+        <p><input type="text" oninput="this.value=this.value.replace(/[^0-9-]/g,'');" id="limite"></p>
+        <p><input type="button" value="Calcular" onclick="tabuada()"></p>
         </div>
-        <div id="res">
+        <p id="res">
             <select name="tabuada" id="tabuada" size="10">
                 <option value="padrao">Entre com um número</option>
             </select>
-        </div>
+        </p>
     </section>
     <footer>
         <p>&copy; Mateus Wesley</p>
